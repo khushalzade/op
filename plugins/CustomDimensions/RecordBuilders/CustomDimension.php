@@ -307,7 +307,7 @@ class CustomDimension extends RecordBuilder
                 $rankingQuery->addColumn($column, $config['aggregation']);
             }
 
-            $query['sql'] = $rankingQuery->generateRankingQuery($query['sql']);
+            $query['sql'] = $rankingQuery->generateRankingQuery($query['sql'], $withRollup = true);
         }
 
         $db        = $logAggregator->getDb();
